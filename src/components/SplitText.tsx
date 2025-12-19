@@ -39,17 +39,19 @@ const SplitText: React.FC<SplitTextProps> = ({
 }) => {
   const ref = useRef<HTMLParagraphElement>(null);
   const animationCompletedRef = useRef(false);
-  const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
+  const [fontsLoaded, setFontsLoaded] = useState(() => {
+  return document.fonts?.status === 'loaded';
+});
+
 
   useEffect(() => {
-    if (document.fonts.status === 'loaded') {
-      setFontsLoaded(true);
-    } else {
-      document.fonts.ready.then(() => {
-        setFontsLoaded(true);
-      });
-    }
-  }, []);
+  if (fontsLoaded) return;
+
+  document.fonts.ready.then(() => {
+    setFontsLoaded(true);
+  });
+}, [fontsLoaded]);
+
 
   useGSAP(
     () => {
@@ -61,8 +63,9 @@ const SplitText: React.FC<SplitTextProps> = ({
       if (el._rbsplitInstance) {
         try {
           el._rbsplitInstance.revert();
-        } catch (_) {}
+        } catch  {
         el._rbsplitInstance = undefined;
+        }
       }
 
       const startPct = (1 - threshold) * 100;
@@ -126,8 +129,9 @@ const SplitText: React.FC<SplitTextProps> = ({
         });
         try {
           splitInstance.revert();
-        } catch (_) {}
+        } catch {
         el._rbsplitInstance = undefined;
+        }
       };
     },
     {

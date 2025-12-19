@@ -1,6 +1,7 @@
 'use client';
 
-import { ElementType, useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
+import {useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
+import type {ElementType} from 'react'
 import { gsap } from 'gsap';
 
 interface TextTypeProps {
@@ -100,7 +101,7 @@ const TextType = ({
   useEffect(() => {
     if (!isVisible) return;
 
-    let timeout: NodeJS.Timeout;
+    let timeout: number;
 
     const currentText = textArray[currentTextIndex];
     const processedText = reverseMode ? currentText.split('').reverse().join('') : currentText;
@@ -169,26 +170,31 @@ const TextType = ({
 
   const shouldHideCursor =
     hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+    const isDomElement = typeof Component === 'string';
+
 
   return createElement(
-    Component,
-    {
-      ref: containerRef,
-      className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
-      ...props
-    },
-    <span className="inline" style={{ color: getCurrentTextColor() || 'inherit' }}>
-      {displayedText}
-    </span>,
-    showCursor && (
-      <span
-        ref={cursorRef}
-        className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${cursorClassName}`}
-      >
-        {cursorCharacter}
-      </span>
-    )
-  );
+  Component,
+  {
+    ...(isDomElement ? { ref: containerRef } : {}),
+    className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
+    ...props
+  },
+  <span className="inline" style={{ color: getCurrentTextColor() || 'inherit' }}>
+    {displayedText}
+  </span>,
+  showCursor && (
+    <span
+      ref={cursorRef}
+      className={`ml-1 inline-block opacity-100 ${
+        shouldHideCursor ? 'hidden' : ''
+      } ${cursorClassName}`}
+    >
+      {cursorCharacter}
+    </span>
+  )
+);
+
 };
 
 export default TextType;
