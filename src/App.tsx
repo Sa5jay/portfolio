@@ -22,7 +22,7 @@ export default function App(): React.ReactElement {
       >
         <div className="relative min-h-screen w-full text-white">
           <div className="fixed inset-0 w-full h-screen  -z-10 pointer-events-none bg-black">
-            <Particles />
+            {/* <Particles /> */}
           </div>
           <div className="fixed inset-x-0 top-[100vh] h-screen md:hidden -z-10 pointer-events-none bg-black" />
           <main className="relative max-w-7xl md:mx-35 mx-5">
