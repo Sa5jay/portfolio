@@ -80,7 +80,6 @@ const [webGLSupported] = useState<boolean>(() => checkWebGLSupport());
       });
     } catch (error) {
       console.error('Failed to create WebGL renderer:', error);
-    webGLSupported(false);
       return;
     }
 
