@@ -109,7 +109,7 @@ const Contact = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-linear-to-r from-fuchsia-500 to-pink-500 hover:from-fuchsia-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="w-full bg-white text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               {submitted ? "✓ Message Sent!" : "Send Message"}
             </button>

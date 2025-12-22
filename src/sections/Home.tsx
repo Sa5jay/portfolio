@@ -35,7 +35,7 @@ const Home = () => {
             pauseDuration={1500}
             showCursor={true}
             cursorCharacter="|"
-            className="text-3xl text-fuchsia-300 md:text-6xl font-serif"
+            className="text-3xl text-black md:text-6xl font-serif"
           />
           <h3 className="md:text-3xl text-lg opacity-90 mt-2">
             I love to build things for the web.
@@ -43,12 +43,12 @@ const Home = () => {
 
           <div className="flex items-center gap-5 font-semibold mt-5">
             <a href="/MyResume.pdf">
-              <button className="border-white text-lg hover:bg-white cursor-pointer hover:text-fuchsia-700  border transition-transform duration-300 px-4 py-3 rounded-lg">
+              <button className="border-white text-lg hover:bg-white cursor-pointer hover:text-black  border transition-transform duration-300 px-4 py-3 rounded-lg">
                 View Resume
               </button>
             </a>
-            <a href="https://github.com/Sa5jay" className="curosr-pointer"><Github className="w-10 h-10 hover:text-fuchsia-500"/></a>
-            <a href="https://www.linkedin.com/in/sanjay-neelakandan-4b8832320/" className="curosr-pointer"><Linkedin className="w-10 h-10 hover:text-fuchsia-500"/> </a>
+            <a href="https://github.com/Sa5jay" className="curosr-pointer"><Github className="w-10 h-10 hover:text-black"/></a>
+            <a href="https://www.linkedin.com/in/sanjay-neelakandan-4b8832320/" className="curosr-pointer"><Linkedin className="w-10 h-10 hover:text-black"/> </a>
           </div>
         </div>
       </section>

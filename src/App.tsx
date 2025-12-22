@@ -19,11 +19,7 @@ export default function App(): React.ReactElement {
         sparkCount={8}
         duration={400}
       >
-        <div className="relative min-h-screen w-full text-white">
-          <div className="fixed inset-0 w-full h-screen  -z-10 pointer-events-none bg-black">
-            {/* <Particles /> */}
-          </div>
-          <div className="fixed inset-x-0 top-[100vh] h-screen md:hidden -z-10 pointer-events-none bg-black" />
+        <div className="relative min-h-screen w-full text-white bg-linear-to-r from-neutral-950 via-neutral-500  to-neutral-950">
           <main className="relative max-w-7xl md:mx-35 mx-5">
             <Navbar/>
             <Home />

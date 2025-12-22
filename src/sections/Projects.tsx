@@ -16,7 +16,7 @@ const Projects = () => {
                 </ScrollFloat>
 
                 <div className="grid grid-cols-2 grid-rows-6  md:grid-cols-8 md:grid-rows-4  gap-5 h-[500px]">
-                  <div className="md:col-span-3 col-span-2 row-span-2 md:row-span-2 rounded-lg overflow-hidden hover:scale-105 shadow-xl hover:shadow-pink-400 transition-transform duration-400">
+                  <div className="md:col-span-3 col-span-2 row-span-2 md:row-span-2 rounded-lg overflow-hidden hover:scale-105 shadow-xl hover:shadow-black transition-transform duration-400">
                     <a href="https://game-ten-steel.vercel.app/">
                       <img
                         src="/game.png"
@@ -25,7 +25,7 @@ const Projects = () => {
                     </a>
                   </div>
 
-                  <div className="md:col-span-3 col-span-1   row-span-2 md:row-span-2 overflow-hidden rounded-lg hover:scale-105 shadow-xl hover:shadow-pink-400 transition-transform duration-400">
+                  <div className="md:col-span-3 col-span-1   row-span-2 md:row-span-2 overflow-hidden rounded-lg hover:scale-105 shadow-xl hover:shadow-black transition-transform duration-400">
                     <a href="https://task-manager-app-zeta-nine.vercel.app/">
                       <img
                         src="/task.png"
@@ -34,7 +34,7 @@ const Projects = () => {
                     </a>
                   </div>
 
-                  <div className="overflow-hidden col-span-1 row-span-2 md:col-span-2 md:row-span-2 rounded-lg hover:scale-105 shadow-xl hover:shadow-pink-400 transition-transform duration-400">
+                  <div className="overflow-hidden col-span-1 row-span-2 md:col-span-2 md:row-span-2 rounded-lg hover:scale-105 shadow-xl hover:shadow-black transition-transform duration-400">
                     <a href="https://sanjay-portfolio-iota-five.vercel.app/">
                       <img
                         src="/doctor.png"
@@ -43,7 +43,7 @@ const Projects = () => {
                     </a>
                   </div>
 
-                  <div className="overflow-hidden md:col-span-4 col-span-1 row-span-2 md:row-span-2 rounded-lg hover:scale-105 shadow-xl hover:shadow-pink-400 transition-transform duration-300">
+                  <div className="overflow-hidden md:col-span-4 col-span-1 row-span-2 md:row-span-2 rounded-lg hover:scale-105 shadow-xl hover:shadow-black transition-transform duration-300">
                     <a href="https://codejavid-apps-448w.vercel.app/">
                       <img
                         src="/tattoo.png"
@@ -52,7 +52,7 @@ const Projects = () => {
                     </a>
                   </div>
 
-                  <div className="overflow-hidden col-span-1 row-span-2 md:col-span-4 md:row-span-2 rounded-lg hover:scale-105 shadow-xl hover:shadow-pink-400 transition-transform duration-300">
+                  <div className="overflow-hidden col-span-1 row-span-2 md:col-span-4 md:row-span-2 rounded-lg hover:scale-105 shadow-xl hover:shadow-black transition-transform duration-300">
                     <a href="https://sanjay-portfolio-iota-five.vercel.app/">
                       <img
                         src="/bookit.png"
