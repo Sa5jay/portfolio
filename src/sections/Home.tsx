@@ -21,8 +21,8 @@ const Home = () => {
         className="h-screen  flex   items-center"
       >
         <div>
-          <h1 className="md:text-8xl text-6xl font-bold leading-tight">
-            Hi,
+          <h1 className="home-page md:text-8xl text-6xl font-Bebas Neue font-bold leading-tight">
+            HI,
             <br /> I'm Sanjay Neelakandan
           </h1>
           <TextType

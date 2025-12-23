@@ -19,7 +19,7 @@ export default function App(): React.ReactElement {
         sparkCount={8}
         duration={400}
       >
-        <div className="relative min-h-screen w-full text-white bg-linear-to-r from-neutral-950 via-neutral-500  to-neutral-950">
+        <div className="relative min-h-screen w-full text-white bg-linear-to-r from-neutral-500 via-neutral-600  to-neutral-700">
           <main className="relative max-w-7xl md:mx-35 mx-5">
             <Navbar/>
             <Home />
